@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/reverse-string/
-class Solution {
+ class app00 {
     public void reverseString(char[] s) {
         int left = 0, right = s.length - 1;
         while (left < right) {
