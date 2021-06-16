@@ -1,5 +1,5 @@
 //https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space/
-class app08 {
+class app19 {
     public static void main(String[] args) {
         int[] arr = { -5, -2, 5, 2, 4, 7, 1, 8, 0, -8 };
 
