@@ -1,6 +1,5 @@
-//https://leetcode.com/problems/maximum-depth-of-binary-tree/
-class app02 {
-    int height(TreeNode root) {
+class helperFunctions {
+    static int height(TreeNode root) {
         if (root == null)
             return 0;
         int lh = height(root.left);
