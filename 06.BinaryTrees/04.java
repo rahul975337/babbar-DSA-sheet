@@ -1,6 +1,9 @@
-//
+import java.util.LinkedList;
+import java.util.Queue;
 
-//RECURSIVE -POSTORDER
+//https://leetcode.com/problems/invert-binary-tree/
+
+//RECURSIVE -POSTORDER(DFS)
 class app04a {
     public TreeNode invertTree(TreeNode root) {
         if (root == null)
@@ -14,4 +17,25 @@ class app04a {
     }
 }
 
-//ITERATIVE -BFS
+// ITERATIVE -BFS
+class app04b {
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null)
+            return null;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode current = queue.poll();
+            // swapping left and righgt
+            TreeNode temp = current.left;
+            current.left = current.right;
+            current.right = temp;
+
+            if (current.left != null)
+                queue.add(current.left);
+            if (current.right != null)
+                queue.add(current.right);
+        }
+        return root;
+    }
+}
