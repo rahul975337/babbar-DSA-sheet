@@ -1,5 +1,7 @@
-class helperFunctions {
-    static int height(TreeNode root) {
+package helper;
+
+public class helperFunctions {
+   public static int height(TreeNode root) {
         if (root == null)
             return 0;
         int lh = height(root.left);

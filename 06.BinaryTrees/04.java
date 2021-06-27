@@ -2,6 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //https://leetcode.com/problems/invert-binary-tree/
+import helper.TreeNode;
 
 //RECURSIVE -POSTORDER(DFS)
 class app04a {

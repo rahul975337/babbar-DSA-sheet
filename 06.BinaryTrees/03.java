@@ -1,4 +1,8 @@
 //https://leetcode.com/problems/diameter-of-binary-tree/
+
+import helper.TreeNode;
+import helper.helperFunctions;
+
 class app03 {
     int diameterOfBinaryTree(TreeNode root) {
         if (root == null)
