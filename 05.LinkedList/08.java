@@ -1,10 +1,11 @@
+import helpers.HelperFunctions;
 import helpers.ListNode;
 
 // https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1#
 
 class app08 {
     public static ListNode addOne(ListNode head) {
-        head = app00a.reverseList(head);
+        head = HelperFunctions.reverseList(head);
         ListNode temp = head;
         ListNode prev = null;
         int sum = 0;
@@ -18,7 +19,7 @@ class app08 {
         }
         if (carry > 0)
             prev.next = new ListNode(carry);
-        head = app00a.reverseList(head);
+        head = HelperFunctions.reverseList(head);
         return head;
     }
 }
