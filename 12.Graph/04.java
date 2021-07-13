@@ -17,7 +17,8 @@ class Pair {
 }
 
 class app04a {
-
+    // we are taking parent/prev node in account because prev node of any nodeis
+    // bound to be visited
     boolean checkForCycleBFS(ArrayList<ArrayList<Integer>> adj, int s, boolean vis[], int parent[]) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(s, -1));
@@ -33,7 +34,6 @@ class app04a {
                     vis[it] = true;
                 } else if (vis[it] == true
                         && it != parentOfVertex)/* it is visited and not the parent node then there is a cycle */
-
                     return true;
             }
         }

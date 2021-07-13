@@ -3,31 +3,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
+//we can also extend this for disconnectedgraph
 class app01 {
-    public ArrayList<Integer> bfsOfGraph(int v, ArrayList<ArrayList<Integer>> adj) {
+    public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         ArrayList<Integer> bfs = new ArrayList<>();
-
-        boolean visited[] = new boolean[v + 1];
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new LinkedList<Integer>();
+        boolean visited[] = new boolean[V];
         q.offer(0);
         visited[0] = true;
-
-        for (int i = 1; i <= v; i++) {
-            if (!visited[i]) {
-                bfs(i, q, visited, bfs, adj);
-            }
-        }
-
-        return bfs;
-    }
-
-    void bfs(int v, Queue<Integer> q, boolean[] visited, ArrayList<Integer> bfs, ArrayList<ArrayList<Integer>> adj) {
         while (!q.isEmpty()) {
             int curr = q.poll();
             bfs.add(curr);
-            // Get all adjacent vertices of the dequeued vertex s
-            // If a adjacent has not been visited, then mark it
-            // visited and enqueue it
             for (int adjVertex : adj.get(curr)) {
                 if (!visited[adjVertex]) {
                     visited[adjVertex] = true;
@@ -35,5 +21,6 @@ class app01 {
                 }
             }
         }
+        return bfs;
     }
 }

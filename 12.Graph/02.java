@@ -5,9 +5,9 @@ class app02 {
     public void dfs(int node, boolean vis[], ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> dfsList) {
         dfsList.add(node);
         vis[node] = true;
-        for (Integer it : adj.get(node)) {
-            if (vis[it] == false) {
-                dfs(it, vis, adj, dfsList);
+        for (int adjVertex : adj.get(node)) {
+            if (!vis[adjVertex]) {
+                dfs(adjVertex, vis, adj, dfsList);
             }
         }
     }
