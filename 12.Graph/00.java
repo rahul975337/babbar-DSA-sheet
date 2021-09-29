@@ -9,8 +9,6 @@ import java.util.Map;
 class app00 {
 
     public static void main(String args[]) {
-
-        // Object of graph is created.
         Graph<Integer> g = new Graph<Integer>();
 
         // edges are added.
